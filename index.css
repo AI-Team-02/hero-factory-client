@@ -917,7 +917,7 @@ nav .logo {
     width: 100%;
     margin: 72px 0 0;
     background: #fff;
-    background-image: url(../img/pattern001.jpg);
+    background-image: url(/assets/img/pattern001.jpg);
     background-repeat: repeat;
 }
 
