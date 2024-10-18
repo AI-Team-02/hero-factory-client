@@ -1,193 +1,184 @@
-
 <!doctype html>
 <html lang="ko">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-	<link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
-
-    <!---파비콘 시작-->
-    <link rel="apple-touch-icon" sizes="57x57" href="favi/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favi/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favi/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favi/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favi/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favi/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favi/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favi/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favi/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favi/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favi/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favi/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favi/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!---파비콘 끝-->
-	<title>히어로팩토리</title>
+  <!---파비콘 시작-->
+  <link rel="apple-touch-icon" sizes="57x57" href="favi/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favi/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favi/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favi/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favi/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favi/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favi/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favi/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favi/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favi/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favi/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favi/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favi/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!---파비콘 끝-->
+  <title>히어로팩토리</title>
 </head>
-<body>
-    <!-- 헤더 네비게이션-->
-	<nav class="site-nav">
-        <div class="container">
-          <div class="site-navigation">
-            <a href="#"><img src="img/logo2.png" class="logo"></a>
-          </div>
-          <div class="site-button">
-            <span>로그인</span>
-            <span>회원가입</span>
-            <span class="game-buy">
-              <a href="#">게임소스 구매하기 ↗</a>
-            </span>
-            <button class="consult-btn">히어로 생성하기</button>
-          </div>
-        </div>
-      </nav>
 
-<!--------모달윈도우 네비 시작 -->
-<div class="menu-logo-container">
+<body>
+  <!-- 헤더 네비게이션-->
+  <nav class="site-nav">
+    <div class="container">
+      <div class="site-navigation">
+        <a href="#"><img src="img/logo2.png" class="logo"></a>
+      </div>
+      <div class="site-button">
+        <span>로그인</span>
+        <span>회원가입</span>
+        <span class="game-buy">
+          <a href="#">게임소스 구매하기 ↗</a>
+        </span>
+        <button class="consult-btn">히어로 생성하기</button>
+      </div>
+    </div>
+  </nav>
+
+  <!--------모달윈도우 네비 시작 -->
+  <div class="menu-logo-container">
     <button class="menu-btn" id="menu-btn"><img src="img/menu3.png"></button>
     <a href="#"><img src="img/logo2.png" class="logo"></a>
-</div>
+  </div>
 
-<div id="nav-modal" class="nav-modal">
+  <div id="nav-modal" class="nav-modal">
     <div class="nav-modal-content">
-        <a href="#">로그인</a>
-        <a href="#">회원가입</a>
-        <a href="#">게임소스 구매하기</a>
-        <a href="#">히어로 생성하기</a>
+      <a href="#">로그인</a>
+      <a href="#">회원가입</a>
+      <a href="#">게임소스 구매하기</a>
+      <a href="#">히어로 생성하기</a>
     </div>
-</div>
-<!--------모달윈도우 네비끝 -->
+  </div>
+  <!--------모달윈도우 네비끝 -->
 
+  <section class="hero-3 overlay">
+    <div class="container">
+      <!-- 캐릭터 이미지가 화면 중앙에 오도록 설정 -->
+      <div class="character">
+        <img src="img/magic_face.png" alt="캐릭터 이미지" class="default-img" />
+        <!-- 대체 이미지 (작은 화면에서만 보임) -->
+        <img src="img/mobile.png" alt="대체 캐릭터 이미지" class="alternate-img" />
 
-
-<!--------모달윈도우 네비 시작 -->
-<script>
-
-</script>
-<!----------모달윈도우 네비 끝-->
-
- <section class="hero-3 overlay">
-        <div class="container">
-            <!-- 캐릭터 이미지가 화면 중앙에 오도록 설정 -->
-            <div class="character">
-                <img src="img/magic_face.png" alt="캐릭터 이미지"  class="default-img" />
-                 <!-- 대체 이미지 (작은 화면에서만 보임) -->
-                <img src="img/mobile.png" alt="대체 캐릭터 이미지" class="alternate-img" />
-
-                     <!-- 앞머리 이미지 추가 -->
-                    <div class="fringe">
-                        <img src="img/magic_hair.png" alt="앞머리 이미지">
-                    </div>
-                   <!-- 눈썹, 눈동자, 입 이미지 추가 -->
-                    <div class="eyebrows">
-                        <img src="img/magic_brow.png" alt="눈썹 이미지">
-                    </div>
-                    <div class="eyes">
-                        <img src="img/magic_eyes.png" alt="눈동자 이미지">
-                    </div>
-                    <div class="mouth">
-                        <img src="img/magic_mouth.png" alt="입 이미지">
-                    </div>
-                   
-            </div>
-            <!-- 텍스트 콘텐츠 -->
-            <h1>DESIGN&<br />DESIGN&</h1>
-            <p class="cha-main-txt">
-                We're a digital studio based in South Florida that's blazing a new trail in the industry,
-                with bold designs that push the boundaries of what's possible, and cutting-edge
-                functionality that makes design solutions stand out from the crowd.
-            </p>
+        <!-- 앞머리 이미지 추가 -->
+        <div class="fringe">
+          <img src="img/magic_hair.png" alt="앞머리 이미지">
         </div>
-        <!-- 배경 비디오 -->
-        <video autoplay muted loop id="bg-video">
-            <source src="video/main1.mp4" type="video/mp4">
-        </video>
-        <div style="opacity: 1; transform: perspective(1200px);" 
-             class="blending1"></div> <!-- 영상 블렌딩 -->
-    </section>
-    
+        <!-- 눈썹, 눈동자, 입 이미지 추가 -->
+        <div class="eyebrows">
+          <img src="img/magic_brow.png" alt="눈썹 이미지">
+        </div>
+        <div class="eyes">
+          <img src="img/magic_eyes.png" alt="눈동자 이미지">
+        </div>
+        <div class="mouth">
+          <img src="img/magic_mouth.png" alt="입 이미지">
+        </div>
 
-<div id="all2">
-    <section id="section2" class="process-section">
-        <h2 class="section-title">어떻게 제작되는지 대충 설명</h2>
-        <p class="splight-txt">
-            아 진심 개미쳤다 어쩌구 저쩌구 랄라블라 할리갈리 </p>
-        <div class="process-container">
-            <div class="process-box">
-                <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
-
-                <h3>캐릭터</h3>
-                <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
-            </div>
-            <div class="process-box">
-                <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
-
-                <h3>UI/UX</h3>
-                <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
-            </div>
-            <div class="process-box">
-                <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
-
-                <h3>아이템</h3>
-                <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
-            </div>
-            <div class="process-box">
-                <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
-
-                <h3>캐릭터</h3>
-                <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
-            </div>
-            <div class="process-box">
-                <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
-
-                <h3>UI/UX</h3>
-                <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
-            </div>
-            <div class="process-box">
-                <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
-
-                <h3>아이템</h3>
-                <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
-            </div>
-            </div>
-            <!-- 배경 비디오 -->
-        
-    </section>
-    <div data-framer-appear-id="42ekam" data-framer-name="Hero Bg Overlay" 
-    name="Hero Bg Overlay" style="opacity: 1; transform: perspective(1200px);" 
-    class="blending3"></div> <!-- 영상 블렌딩 -->
+      </div>
+      <!-- 텍스트 콘텐츠 -->
+      <h1>DESIGN&<br />DESIGN&</h1>
+      <p class="cha-main-txt">
+        We're a digital studio based in South Florida that's blazing a new trail in the industry,
+        with bold designs that push the boundaries of what's possible, and cutting-edge
+        functionality that makes design solutions stand out from the crowd.
+      </p>
+    </div>
+    <!-- 배경 비디오 -->
     <video autoplay muted loop id="bg-video">
-        <source src="video/space.mp4" type="video/mp4">
+      <source src="video/main1.mp4" type="video/mp4">
     </video>
-    
-</div>
+    <div style="opacity: 1; transform: perspective(1200px);" class="blending1"></div> <!-- 영상 블렌딩 -->
+  </section>
 
-<section class="video-text-section">
-	<div class="video-container">
-	  <video autoplay muted loop>
-		<source src="video/sample.mp4" type="video/mp4">
-	  </video>
-	</div>
-	<div class="text-container">
-	  <h3 class="cate">캐릭터 재연</h3>
-	  <h2>대충 여기는 캐릭터만 드는 재연 영상임.</h2>
-	  <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....</p>
-	</div>
-  
+
+  <div id="all2">
+    <section id="section2" class="process-section">
+      <h2 class="section-title">어떻게 제작되는지 대충 설명</h2>
+      <p class="splight-txt">
+        아 진심 개미쳤다 어쩌구 저쩌구 랄라블라 할리갈리 </p>
+      <div class="process-container">
+        <div class="process-box">
+          <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
+
+          <h3>캐릭터</h3>
+          <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
+        </div>
+        <div class="process-box">
+          <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
+
+          <h3>UI/UX</h3>
+          <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
+        </div>
+        <div class="process-box">
+          <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
+
+          <h3>아이템</h3>
+          <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
+        </div>
+        <div class="process-box">
+          <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
+
+          <h3>캐릭터</h3>
+          <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
+        </div>
+        <div class="process-box">
+          <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
+
+          <h3>UI/UX</h3>
+          <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
+        </div>
+        <div class="process-box">
+          <img src="img/i1.png" alt="아이콘 이미지" class="rotating-image">
+
+          <h3>아이템</h3>
+          <p>캐릭터는 다양한 스타일과 형태로 생성됩니다. 고객의 요구에 맞춰 개별적으로 커스터마이징할 수 있습니다.</p>
+        </div>
+      </div>
+      <!-- 배경 비디오 -->
+
+    </section>
+    <div data-framer-appear-id="42ekam" data-framer-name="Hero Bg Overlay" name="Hero Bg Overlay"
+      style="opacity: 1; transform: perspective(1200px);" class="blending3"></div> <!-- 영상 블렌딩 -->
+    <video autoplay muted loop id="bg-video">
+      <source src="video/space.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+  <section class="video-text-section">
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="video/sample.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="text-container">
+      <h3 class="cate">캐릭터 재연</h3>
+      <h2>대충 여기는 캐릭터만 드는 재연 영상임.</h2>
+      <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나
+        집에 간다아아아아.....</p>
+    </div>
+
 
   </section>
-  
+
   <section class="video-text-section">
     <div class="text-container">
       <h3 class="cate">캐릭터 재연</h3>
       <h2>대충 여기는 캐릭터만 드는 재연 영상임.</h2>
-      <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....</p>
+      <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나
+        집에 간다아아아아.....</p>
     </div>
     <div class="video-container">
       <video autoplay muted loop>
@@ -196,56 +187,28 @@
     </div>
   </section>
 
-    
-  <section class="video-text-section">
-	<div class="video-container">
-	  <video autoplay muted loop>
-		<source src="video/sample.mp4" type="video/mp4">
-	  </video>
-	</div>
-	<div class="text-container">
-	  <h3 class="cate">캐릭터 재연</h3>
-	  <h2>대충 여기는 캐릭터만 드는 재연 영상임.</h2>
-	  <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....</p>
-	</div>
-  </section>
-
 
   <section class="video-text-section">
-    <div class="text-container">
-      <h3 class="cate">캐릭터 재연</h3>
-      <h2>대충 여기는 캐릭터만 드는 재연 영상임.</h2>
-      <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....</p>
-    </div>
     <div class="video-container">
       <video autoplay muted loop>
         <source src="video/sample.mp4" type="video/mp4">
       </video>
     </div>
+    <div class="text-container">
+      <h3 class="cate">캐릭터 재연</h3>
+      <h2>대충 여기는 캐릭터만 드는 재연 영상임.</h2>
+      <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나
+        집에 간다아아아아.....</p>
+    </div>
   </section>
-  
 
-  </section>
-  <section class="video-text-section">
-	<div class="video-container">
-	  <video autoplay muted loop>
-		<source src="video/sample.mp4" type="video/mp4">
-	  </video>
-	</div>
-	<div class="text-container">
-	  <h3 class="cate">캐릭터 재연</h3>
-	  <h2>대충 여기는 캐릭터만 드는 재연 영상임.</h2>
-	  <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....</p>
-	</div>
-  
-
-  </section>
 
   <section class="video-text-section">
     <div class="text-container">
       <h3 class="cate">캐릭터 재연</h3>
       <h2>대충 여기는 캐릭터만 드는 재연 영상임.</h2>
-      <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....</p>
+      <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나
+        집에 간다아아아아.....</p>
     </div>
     <div class="video-container">
       <video autoplay muted loop>
@@ -255,146 +218,171 @@
   </section>
 
 
+  </section>
+  <section class="video-text-section">
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="video/sample.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="text-container">
+      <h3 class="cate">캐릭터 재연</h3>
+      <h2>대충 여기는 캐릭터만 드는 재연 영상임.</h2>
+      <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나
+        집에 간다아아아아.....</p>
+    </div>
+  </section>
 
-<!-- 모달 구조에서 캡션 제거 -->
-<div id="sprite-modal" class="modal">
+  <section class="video-text-section">
+    <div class="text-container">
+      <h3 class="cate">캐릭터 재연</h3>
+      <h2>대충 여기는 캐릭터만 드는 재연 영상임.</h2>
+      <p>우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나 집에 간다아아아아.....우리 체리 간식 줘야하는데 집에 가고 싶다. 누나
+        집에 간다아아아아.....</p>
+    </div>
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="video/sample.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+
+  <!-- 모달 구조에서 캡션 제거 -->
+  <div id="sprite-modal" class="modal">
     <span class="close">&times;</span> <!-- 닫기 버튼 -->
     <img class="modal-content" id="modal-img">
-</div>
-<div id="all3"> 
+  </div>
+  <div id="all3">
     <section id="section3" class="splight-section">
-        <div class="section3_wrap">
-          <h2 class="section-title">스프라이트 시트 나온다는 설명</h2>
-          <p class="splight-txt">
-               아 진심 개미쳤다 어쩌구 저쩌구 랄라블라 할리갈리 </p>
-            <div class="process2-container">
-                <div class="process2-box">
-                    <img src="img/sprit.png" alt="스프라이트 이미지 1" class="sprite-img" style="width:100%;">
-                </div>
-                <div class="process2-box">
-                    <img src="img/sprit.png" alt="스프라이트 이미지 2" class="sprite-img" style="width:100%;">
-                </div>
-                <div class="process2-box">
-                    <img src="img/sprit.png" alt="스프라이트 이미지 3" class="sprite-img" style="width:100%;">
-                </div>
-                <div class="process2-box">
-                    <img src="img/sprit.png" alt="스프라이트 이미지 4" class="sprite-img" style="width:100%;">
-                </div>
-                <div class="process2-box">
-                    <img src="img/sprit.png" alt="스프라이트 이미지 5" class="sprite-img" style="width:100%;">
-                </div>
-                <div class="process2-box">
-                    <img src="img/sprit.png" alt="스프라이트 이미지 6" class="sprite-img" style="width:100%;">
-                </div>
-            </div>
+      <div class="section3_wrap">
+        <h2 class="section-title">스프라이트 시트 나온다는 설명</h2>
+        <p class="splight-txt">
+          아 진심 개미쳤다 어쩌구 저쩌구 랄라블라 할리갈리 </p>
+        <div class="process2-container">
+          <div class="process2-box">
+            <img src="img/sprit.png" alt="스프라이트 이미지 1" class="sprite-img" style="width:100%;">
+          </div>
+          <div class="process2-box">
+            <img src="img/sprit.png" alt="스프라이트 이미지 2" class="sprite-img" style="width:100%;">
+          </div>
+          <div class="process2-box">
+            <img src="img/sprit.png" alt="스프라이트 이미지 3" class="sprite-img" style="width:100%;">
+          </div>
+          <div class="process2-box">
+            <img src="img/sprit.png" alt="스프라이트 이미지 4" class="sprite-img" style="width:100%;">
+          </div>
+          <div class="process2-box">
+            <img src="img/sprit.png" alt="스프라이트 이미지 5" class="sprite-img" style="width:100%;">
+          </div>
+          <div class="process2-box">
+            <img src="img/sprit.png" alt="스프라이트 이미지 6" class="sprite-img" style="width:100%;">
+          </div>
         </div>
+      </div>
     </section>
-</div>
+  </div>
 
 
-<div id="all4">
+  <div id="all4">
     <section id="section4" class="shopinfo-section">
-        <div class="section4_wrap">
-            <h2 class="section-title2">우리 이런것도 판다</h2>
-            <div class="bestitem-header">
-                <p class="bestitem-txt">24시간 클릭 기준</p>
-                <p class="bestitem-txt2">shop now</p>
-              </div>
-                <div class="item-container">
-                    <div class="item-box">
-                    <img src="img/game.jpg" alt="게임 이미지 1" class="item-img">
-                    <p class="category">모바일</p>
-                    <h3>스마트폰게임팩도 있고</h3>
-                    <p class="description2">여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용.</p>
-                    </div>
-                    <div class="item-box">
-                    <img src="img/game.jpg" alt="게임 이미지 2" class="item-img">
-                    <p class="category">콘솔 게임</p>
-                    <h3>콘솔 게임팩도 있음</h3>
-                    <p class="description2">여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. </p>
-                    </div>
-                    <div class="item-box">
-                    <img src="img/game.jpg" alt="게임 이미지 3" class="item-img">
-                    <p class="category">PC 게임</p>
-                    <h3>와 근데 PC 게임팩도 있음</h3>
-                    <p class="description2">여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. </p>
-                    </div>
-                </div>
-            </div>
+      <div class="section4_wrap">
+        <h2 class="section-title2">우리 이런것도 판다</h2>
+        <div class="bestitem-header">
+          <p class="bestitem-txt">24시간 클릭 기준</p>
+          <p class="bestitem-txt2">shop now</p>
+        </div>
+        <div class="item-container">
+          <div class="item-box">
+            <img src="img/game.jpg" alt="게임 이미지 1" class="item-img">
+            <p class="category">모바일</p>
+            <h3>스마트폰게임팩도 있고</h3>
+            <p class="description2">여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용.</p>
+          </div>
+          <div class="item-box">
+            <img src="img/game.jpg" alt="게임 이미지 2" class="item-img">
+            <p class="category">콘솔 게임</p>
+            <h3>콘솔 게임팩도 있음</h3>
+            <p class="description2">여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. </p>
+          </div>
+          <div class="item-box">
+            <img src="img/game.jpg" alt="게임 이미지 3" class="item-img">
+            <p class="category">PC 게임</p>
+            <h3>와 근데 PC 게임팩도 있음</h3>
+            <p class="description2">여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. 여기는 내용. </p>
+          </div>
+        </div>
+      </div>
     </section>
-</div>
+  </div>
 
 
-<div id="all5">
+  <div id="all5">
     <section id="section5" class="bestitem-section">
-        <div class="section5_wrap">
-            <h2 class="section-title2">BEST ITEM</h2>
-            <div class="bestitem-header">
-                <p class="bestitem-txt">24시간 클릭 기준</p>
-                <p class="bestitem-txt2">shop now</p>
-              </div>
-            <div class="item-container" id="carousel">
-                <div class="item-box">
-                    <img src="img/item1.png" alt="상품 이미지 1" class="item-img">
-                    <p class="category">몬스터 주식회사</p>
-                    <h3>2D Pixel Unit Maker - SPUM</h3>
-                    <p class="price">49,000원</p>
-                </div>
-                <div class="item-box">
-                    <img src="img/item2.png" alt="상품 이미지 2" class="item-img">
-                    <p class="category">친구들 주식회사</p>
-                    <h3>2D Pixel Unit Maker - SPUM</h3>
-                    <p class="price"><span class="persent">32%</span> <span class="sale-price">405,000원</span> <span class="original-price">598,000원</span></p>
-                </div>
-
-                <div class="item-box">
-                    <img src="img/item3.png" alt="상품 이미지 3" class="item-img">
-                    <p class="category">동물들 주식회사</p>
-                    <h3>2D Pixel Unit Maker</h3>
-                    <p class="price">89,000원</p>
-                </div>
-
-                <div class="item-box">
-                    <img src="img/item3.png" alt="상품 이미지 3" class="item-img">
-                    <p class="category">동물들 주식회사</p>
-                    <h3>2D Pixel Unit Maker</h3>
-                    <p class="price">89,000원</p>
-                </div>
-
-                <div class="item-box">
-                    <img src="img/item3.png" alt="상품 이미지 3" class="item-img">
-                    <p class="category">동물들 주식회사</p>
-                    <h3>2D Pixel Unit Maker</h3>
-                    <p class="price">89,000원</p>
-                </div>
-            </div>
+      <div class="section5_wrap">
+        <h2 class="section-title2">BEST ITEM</h2>
+        <div class="bestitem-header">
+          <p class="bestitem-txt">24시간 클릭 기준</p>
+          <p class="bestitem-txt2">shop now</p>
         </div>
+        <div class="item-container" id="carousel">
+          <div class="item-box">
+            <img src="img/item1.png" alt="상품 이미지 1" class="item-img">
+            <p class="category">몬스터 주식회사</p>
+            <h3>2D Pixel Unit Maker - SPUM</h3>
+            <p class="price">49,000원</p>
+          </div>
+          <div class="item-box">
+            <img src="img/item2.png" alt="상품 이미지 2" class="item-img">
+            <p class="category">친구들 주식회사</p>
+            <h3>2D Pixel Unit Maker - SPUM</h3>
+            <p class="price"><span class="persent">32%</span> <span class="sale-price">405,000원</span> <span
+                class="original-price">598,000원</span></p>
+          </div>
+
+          <div class="item-box">
+            <img src="img/item3.png" alt="상품 이미지 3" class="item-img">
+            <p class="category">동물들 주식회사</p>
+            <h3>2D Pixel Unit Maker</h3>
+            <p class="price">89,000원</p>
+          </div>
+
+          <div class="item-box">
+            <img src="img/item3.png" alt="상품 이미지 3" class="item-img">
+            <p class="category">동물들 주식회사</p>
+            <h3>2D Pixel Unit Maker</h3>
+            <p class="price">89,000원</p>
+          </div>
+
+          <div class="item-box">
+            <img src="img/item3.png" alt="상품 이미지 3" class="item-img">
+            <p class="category">동물들 주식회사</p>
+            <h3>2D Pixel Unit Maker</h3>
+            <p class="price">89,000원</p>
+          </div>
+        </div>
+      </div>
     </section>
-
-</div>
-
+  </div>
 
 
-<section id="floating-section">
+  <section id="floating-section">
     <div class="container">
-        <div class="text-content">
-            <h2 class="section-title3">이제 여기서 내용 끝</h2>
-            <h3 class="last-section-h3">체험해보겠습니까</h3>
-            <p class="last-section-p">
-                게임 캐릭터를 직접 AI로 생성해서 사용하세요요요요요요<br>
-                게임 캐릭터를 직접 AI로 생성해서 사용하세요요요요요
-            </p>
-            <button class="register-btn">캐릭터 생성하기</button>
-        </div>
+      <div class="text-content">
+        <h2 class="section-title3">이제 여기서 내용 끝</h2>
+        <h3 class="last-section-h3">체험해보겠습니까</h3>
+        <p class="last-section-p">
+          게임 캐릭터를 직접 AI로 생성해서 사용하세요요요요요요<br>
+          게임 캐릭터를 직접 AI로 생성해서 사용하세요요요요요
+        </p>
+        <button class="register-btn">캐릭터 생성하기</button>
+      </div>
     </div>
     <video autoplay muted loop id="bg-video">
-        <source src="video/main1.mp4" type="video/mp4">
+      <source src="video/main1.mp4" type="video/mp4">
     </video>
-    <div style="opacity: 1; transform: perspective(1200px);" 
-         class="blending1"></div> <!-- 영상 블렌딩 -->
-</section>
-
-  
+    <div style="opacity: 1; transform: perspective(1200px);" class="blending1"></div> <!-- 영상 블렌딩 -->
+  </section>
 
   <div class="footer">
     <div class="ft-wr">
@@ -413,15 +401,18 @@
         </div>
       </div>
       <div class="ft-right">
-            <div class="ft-link">
-            <a href="">개인정보처리방침</a>
-            <a href="">이메일주소무단수집거부</a>
-            <a href="">이용약관</a>
-            <a href="">구독신청/해지</a>
-            </div>
+        <div class="ft-link">
+          <a href="">개인정보처리방침</a>
+          <a href="">이메일주소무단수집거부</a>
+          <a href="">이용약관</a>
+          <a href="">구독신청/해지</a>
         </div>
+      </div>
     </div>
   </div>
 
+  <!-- js -->
+  <script type="module" src="js/script.js"></script>
 </body>
+
 </html>

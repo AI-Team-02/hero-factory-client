@@ -1,3 +1,5 @@
+import './index.css';
+
 function func1() {
 
     let ref = document.querySelector("div#ref").innerText;
