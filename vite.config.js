@@ -5,6 +5,7 @@ import { promises as fs } from 'fs';
 // input에 사용할 HTML 파일 경로들을 미리 정의
 const inputFiles = {
   index: resolve(__dirname, 'index.html'),                                       
+  service: resolve(__dirname, 'src/pages/service/service.html'),                                       
 };
 
 // 빈 디렉토리를 삭제하는 재귀 함수
