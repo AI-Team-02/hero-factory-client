@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>히어로팩토리 생성</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <!-- 로고 영역 -->
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="로고" class="logo-img" style="width:110px;">
+            </div>
+        
+            <!-- 프로필 영역 -->
+            <div class="profile">
+                <img src="/assets/img/profile.jpg" alt="프로필 사진" class="profile-pic">
+                <div class="profile-text">
+                    <div class="online-indicator"></div>
+                    <p class="name">이영지님이 접속하셨습니다.</p>
+                    <p class="role">일반회원</p>
+                </div>
+            </div>
+        
+            <!-- 우측 버튼들 -->
+            <div class="header-buttons">
+                <button class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                      <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">스토어로 이동하기</span>
+                  </button>
+                <button class="button-38" role="button">로그인</button>
+                <button class="button-38" role="button">회원가입</button>
+            </div>
+        </header>
+        
+
+        <div class="container">
+            <div class="text-sidebar">
+                <button class="sidebar-button" data-active="false">
+                    <img src="/assets/icon/home_active.png" alt="Icon 1" class="sidebar-icon">홈
+                </button>
+                <button class="sidebar-button" data-active="false">
+                    <img src="/assets/icon/sample4.png" alt="Icon 2" class="sidebar-icon">카테2
+                </button>
+                <button class="sidebar-button" data-active="false">
+                    <img src="/assets/icon/sample1.png" alt="Icon 3" class="sidebar-icon">카테3
+                </button>
+                <button class="sidebar-button" data-active="false">
+                    <img src="/assets/icon/sample2.png" alt="Icon 4" class="sidebar-icon">카테4
+                </button>
+                <button class="sidebar-button" data-active="false">
+                    <img src="/assets/icon/sample3.png" alt="Icon 5" class="sidebar-icon">카테5
+                </button>
+                <div class="flex-grow"></div>
+                <button class="sidebar-button" data-active="false">
+                    <img src="/assets/icon/info.png" alt="Info Icon" class="sidebar-icon">인포
+                </button>
+                <button class="sidebar-button" data-active="false">
+                    <img src="/assets/icon/logout.png" alt="Logout Icon" class="sidebar-icon">로그아웃
+                </button>
+            </div>
+            
+
+            <main class="content">
+                <div class="left-section">
+                    <canvas id="drawingCanvas"></canvas>
+                    <!-- <div class="toolbar">
+                        <button id="pencilButton">연필</button>
+                        <button id="eraserButton">지우개</button>
+                        <button id="undoButton">되돌리기</button>
+                        <button id="redoButton">다음으로</button>
+                        <button id="clearButton">모두 지우기</button>
+                    </div> -->
+                    <div class="toolbar">
+                        <button id="pencilButton" class="tool-button">
+                            <img src="/assets/icon/pencil_active.png" alt="연필" class="tool-icon" id="pencilIcon">
+                        </button>
+                        <button id="eraserButton" class="tool-button">
+                            <img src="/assets/icon/eraser.png" alt="지우개" class="tool-icon" id="eraserIcon">
+                        </button>
+                        <button id="undoButton" class="tool-button">
+                            <img src="/assets/icon/undo.png" alt="되돌리기" class="tool-icon" id="undoIcon">
+                        </button>
+                        <button id="redoButton" class="tool-button">
+                            <img src="/assets/icon/redo.png" alt="다음으로" class="tool-icon" id="redoIcon">
+                        </button>
+                        <button id="clearButton" class="tool-button">
+                            <img src="/assets/icon/clear.png" alt="모두 지우기" class="tool-icon" id="clearIcon">
+                        </button>
+                    </div>
+                    
+                    <span class="promtxt ">어떤이미지를 원하시나요? 원하시는 이미지의 세부사항을 입력하세요.</span>
+                    <textarea id="user-text" placeholder="텍스트를 입력하세요"></textarea>
+                    <div id="charCount">0/300 <img src="/assets/icon/i.png"></div> <!-- 글자수 카운트 표시 -->
+                
+                    <!-- <button class="shiny-cta">
+                        <span>생성하기</span>
+                      </button> -->
+                      <button class="created_btn" style="--ripples: 12;">생성하기</button>
+                </div>
+                
+                <div class="right-section shiny-cta" >
+                        
+                    <div class="image-container twingklebox">
+                        <span> 이미지를 생성하려면 '생성하기' 버튼을 눌러주세요.</span>
+                        <img id="generated-image" src="/assets/img/dog.PNG" alt="생성된 이미지" style="display: none;" />
+                       <div id="loading-animation" style="display: none;" >
+                        <div id="loader">
+                            <div class="cube-folding">
+                                <span class="leaf1"></span>
+                                <span class="leaf2"></span>
+                                <span class="leaf3"></span>
+                                <span class="leaf4"></span>
+                            </div>
+                        </div>
+                        </div> 
+
+                        <div class="bottom-image-buttons">
+                            <span>공유하기로 내가 만든 캐릭터를 자랑해보세요.</span>
+                            <div>
+                                <button id="download-button" href="http://naver.com" role="button">저장하기</button>
+                                
+                                <button id="share"><img src="/assets/icon/kakao.png" alt="카카오톡" class="share-icon"></button>
+                                <button id="share"><img src="/assets/icon/twitter.png" alt="x" class="share-icon"></button>
+                                <button id="share"><img src="/assets/icon/instargram.png" alt="인스타그램" class="share-icon"></button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div><!---right-->
+            </main>
+            
+            
+        </div>
+    </div>
+
+    <!-- js -->
+    <script type="module" src="./service.js"></script>
+</body>
+</html>
