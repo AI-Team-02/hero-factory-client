@@ -147,10 +147,13 @@ document.getElementById('clearButton').addEventListener('mousedown', () => {
     document.getElementById('clearIcon').src = '/assets/icon/clear_active.png';
 });
 
+const generatedImage = document.getElementById('generated-image');
+const instructionText = document.querySelector('.image-container > span');
+const loadingAnimation = document.getElementById('loading-animation');
+
 /* 이미지 저장 */
 document.getElementById('download-button').addEventListener('click', (event) => {
     event.preventDefault(); 
-    const generatedImage = document.getElementById('generated-image');
 
     if (generatedImage.style.display !== 'none' && generatedImage.src) {
         const newWindow = window.open(generatedImage.src);
@@ -161,20 +164,74 @@ document.getElementById('download-button').addEventListener('click', (event) => 
 });
 
 /* 이미지 로딩 애니메이션 */
-document.querySelector('.created_btn').addEventListener('click', () => {
-    const instructionText = document.querySelector('.image-container > span');
-    const loadingAnimation = document.getElementById('loading-animation');
-    const generatedImage = document.getElementById('generated-image');
-    
-    instructionText.style.display = 'none';
-    loadingAnimation.style.display = 'block';
-    generatedImage.style.display = 'none'; 
+document.querySelector('.created_btn').addEventListener('click', async () => {
+    // 기존 캔버스 내용을 Blob으로 변환
+    const scatchImgBlob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+    // Blob을 512x512 크기로 리사이즈
+    const resizedBlob = await resizeImageTo512(scatchImgBlob);
 
-    setTimeout(() => {
+    const formatData = new FormData();
+    formatData.append('image', resizedBlob, 'scatch.png');
+    formatData.append('prompt', document.getElementById('user-text').value);
+
+    try {
+        instructionText.style.display = 'none';
+        loadingAnimation.style.display = 'block';
+        generatedImage.style.display = 'none'; 
+    
+        const response = await fetch('http://192.168.0.141:28000/generate-image', {
+            method: 'POST', 
+            body: formatData
+        });
+    
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+    
+        // response.blob()는 비동기 함수이므로 await로 처리해야 함
+        const responseBlob = await response.blob(); // await 추가
+        const responseImgUrl = URL.createObjectURL(responseBlob);
+    
+        // 로딩 애니메이션 종료 후 이미지 표시
         loadingAnimation.style.display = 'none';
+        generatedImage.src = responseImgUrl;
         generatedImage.style.display = 'block';
-    }, 7000);  
+        
+    } catch (e) {
+        console.error('Error', e);
+        loadingAnimation.style.display = 'none'; // 오류 발생 시에도 로딩 애니메이션 숨김
+        instructionText.style.display = 'block'; // 오류 시 안내 텍스트 다시 표시
+    }    
 });
+
+function resizeImageTo512(blob) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        const url = URL.createObjectURL(blob);
+        img.src = url;
+
+        img.onload = () => {
+            // 512x512 크기의 새로운 캔버스 생성
+            const resizedCanvas = document.createElement('canvas');
+            resizedCanvas.width = 512;
+            resizedCanvas.height = 512;
+            const resizedCtx = resizedCanvas.getContext('2d');
+
+            // 기존 이미지를 512x512 크기로 리사이즈하여 새로운 캔버스에 그리기
+            resizedCtx.drawImage(img, 0, 0, 512, 512);
+
+            // 리사이즈된 캔버스를 Blob으로 변환
+            resizedCanvas.toBlob(resizedBlob => {
+                resolve(resizedBlob);  // 변환된 Blob 반환
+                URL.revokeObjectURL(url);  // 메모리 해제
+            }, 'image/png');
+        };
+
+        img.onerror = () => {
+            reject(new Error("이미지 로딩 중 오류 발생"));
+        };
+    });
+}
 
 /* 이미지에 마우스 오버 시 버튼 표시 */
 const bottomButtons = document.querySelector('.bottom-image-buttons');
