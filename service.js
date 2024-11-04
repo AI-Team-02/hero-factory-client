@@ -1,6 +1,6 @@
 
 
-/* 툴바 */
+/* 툴바 **/
 const canvas = document.getElementById('drawingCanvas');
 const ctx = canvas.getContext('2d');
 let drawing = false;
