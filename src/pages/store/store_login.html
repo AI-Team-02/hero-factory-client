@@ -1,0 +1,423 @@
+
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="pretendard.css" rel="stylesheet" type="text/css"/> <!--폰트-->
+<link href="store_reset.css" rel="stylesheet" type="text/css"/> <!---리셋-->
+<title>히어로 스토어</title>
+<link href="store.css" rel="stylesheet" type="text/css"/>
+<link href="store_swiper.min.css" rel="stylesheet" type="text/css"/>
+<!-- // CSS -->
+<link href="store__reset.css" rel="stylesheet" type="text/css"/> <!--리셋-->
+<link href="store_liven-theme.css" rel="stylesheet" type="text/css"/> <!---키프레임-->
+<link href="store_dbook.css" rel="stylesheet" type="text/css"/> <!-- 공통-->
+
+<!--sub-->
+<script src="store_login.js" defer type="text/javascript"></script>
+<link href="store_login.css" rel="stylesheet" type="text/css">
+
+<!-- // JS -->
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="store_swiper.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script> <!----실시간랭크-->
+
+
+
+<!-- JS.swiper -->
+<script src="store_dbook.js"></script>
+<script charset="utf-8" src="store_slick.js" type="text/javascript"></script>
+<script src="store.js" type="text/javascript"></script>
+</head>
+<body class="body-main body-index pc">
+
+
+<div id="wrap">
+<div id="header_warp">
+<div class="fixed" id="header" style="min-height: 219px;">
+<div class="top-line" id="topLine" style="height: 47px;">
+<div class="top-bn">
+<img alt="banner" src="img/banner2.png" title="banner"/>
+</div>
+</div>
+<div class="header-wrap">
+<div class="header-inner">
+<div class="header-top">
+<div class="header-left">
+<!-- 로고 -->
+ 
+
+<h1 class="top-logo">
+<a href="store.html"><img alt="상단 로고" src="img/logo.jpg" title="상단 로고"/></a></h1>
+<div class="top-search"> <!-- 검색 폼 --> <div class="top_search">
+<form action="" id="frmSearchTop" method="get" name="frmSearchTop" novalidate="novalidate">
+<fieldset>
+<legend>검색폼</legend>
+<div class="top_search_cont">
+<div class="top_text_cont">
+<input autocomplete="off" class="top_srarch_text" id="search_form" name="keyword" placeholder="" title="" type="text"/>
+<input alt="검색" class="btn_top_srarch" id="btnSearchTop" src="img/btn_top_search.png" title="검색" type="image" value="검색"/>
+</div>
+<!-- //top_text_cont -->
+<div class="search_cont" style="display:none;">
+<input name="recentCount" type="hidden" value="10"/>
+</div>
+<!-- //search_cont -->
+</div>
+<!-- //top_search_cont -->
+</fieldset>
+</form>
+</div>
+<!-- //top_search -->
+<!-- 검색 폼 -->
+</div>
+</div>
+<div class="header-right">
+<div class="top-account">
+<ul class="column1">
+<li class="log"><a href="store_login.html">로그인</a></li>
+<li class="join"><a href="">회원가입</a></li>
+<li><a href="">고객센터</a></li>
+</ul>
+<ul class="column2">
+<li class="basket"><a href="store_cart.html">장바구니<span class="count"><em>0</em></span></a></li>
+<li class="mypage"><a href="">마이페이지</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header-main">
+<div class="header-inner">
+<!-- category -->
+<div id="category">
+<!-- 전체 카테고리 팝업 시작 -->
+<div class="gnb_all">
+<a class="btn_all_menu_open" href="javascript:;"><span></span>전체카테고리</a>
+</div>
+<!--wrap menu-->
+
+<div class="gnb_allmenu_wrap">
+    <div class="gnb_allmenu" style="display: none;">
+        <div class="gnb_allmenu_box">
+            <ul>
+                <li style="width:20%;">
+                    <div class="all_menu_cont">
+                        <a href="">카테고리1</a>
+                        <ul class="all_depth1">
+                            <li>
+                                <a href="">서브카테고리</a>
+                            </li>
+                            <li>
+                                <a href="">서브카테고리</a>
+                            </li>
+                            <li>
+                                <a href="">서브카테고리</a>
+                            </li>
+                            <li>
+                                <a href="">서브카테고리</a>
+                            </li>
+                                <li><a href="">서브카테고리</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li style="width:20%;">
+                        <div class="all_menu_cont">
+                            <a href="">카테고리2</a>
+                        </div>
+                    </li>
+                    <li style="width:20%;">
+                        <div class="all_menu_cont">
+                            <a href="">카테고리3</a>
+                        </div>
+                    </li>
+                    <li style="width:20%;">
+                        <div class="all_menu_cont">
+                            <a href="">카테고리4</a>
+                        </div>
+                    </li>
+                    <li style="width:20%;">
+                        
+                        <div class="all_menu_cont">
+                            <a href="">카테고리5</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <span class="btn_all_menu_close" onclick="gd_btn_all_menu_close();">전체메뉴닫기</span></div>
+            <script> 
+            /* 전체카테고리 열고 닫기 */
+            $(document).ready(function() {
+            // btn_all_menu_open 버튼 클릭 시 열기/닫기
+            $(".btn_all_menu_open").on("click", function() {
+                $(".gnb_allmenu").slideToggle(300); // 슬라이드 속도 조절 가능
+            });
+
+            // btn_all_menu_close 버튼 클릭 시 닫기
+            $(".btn_all_menu_close").on("click", function() {
+                $(".gnb_allmenu").slideUp(300); // 슬라이드 속도 조절 가능
+            });
+            });
+         </script>
+</div>
+<!--//wrap menu-->
+<div class="sub_menu_box layer_type cate-menu">
+<ul class="sub_depth0 sub_menu0 menu-list">
+<li class="tit1 menu-item">
+<a class="" href="">카테고리1</a>
+<ul class="sub_depth1" style="display: none;">
+<li>
+<a class="" href="">섭카테</a>
+</li>
+<li>
+<a class="" href="">섭카테</a>
+</li>
+<li>
+<a href="">섭카테</a>
+</li>
+</ul>
+</li>
+<li class="tit2 menu-item">
+<a class="" href="">카테고리2</a>
+</li>
+<li class="tit3 menu-item">
+<a class="" href="">카테고리3</a>
+</li>
+<li class="tit4 menu-item">
+<a class="" href="">카테고리4</a>
+</li>
+<li class="tit5 menu-item">
+<a class="" href="">카테고리5</a>
+</li>
+</ul>
+</div> <!--//sub_menu_box layer_type cate-menu-->
+</div> <!--//header-main-->
+<div class="extra-menu">
+<ul class="menu-list">
+<li><a href=""><span>공지사항</span></a></li>
+<li><a href=""><span>고객문의</span></a></li>
+<div id="keyword_wrap">
+    <div id="hot_keyword">
+    <div class="title_keyword">인기 검색어</div>
+                <dl id="rank-list">             
+                    <dd>
+                        <ol>
+                            <li><a href=""><span>1</span> 상품1 <p>ㅡ</p></a></li>
+                            <li><a href=""><span>2</span> 상품2<p>ㅡ</p></a></li>
+                            <li><a href=""><span>3</span> 상품3<p style="color:#F90006">▲</p></a></li>
+                            <li><a href=""><span>4</span> 상품4<p style="color:#F90006">▲</p></a></li>
+                            <li><a href=""><span>5</span> 상품5<p>ㅡ</p></a></li>
+                            <li><a href=""><span>6</span> 상품6<p style="color:#F90006">▲</p></a></li>
+                            <li><a href=""><span>7</span> 상품7<p style="color:#0145F8">▼</p></a></li>
+                        </ol>
+                    </dd>
+                </dl>
+            <!-- <div class="keyword_sub">
+                    <a href=""><span>1</span>상품1</a>
+                    <a href=""><span>2</span>상품2</a>
+                    <a href=""><span>3</span>상품3</a>
+                    <a href=""><span>4</span>상품4</a>
+                    <a href=""><span>5</span>상품5</a>
+                    <a href=""><span>6</span>상품6</a>
+                    <a href=""><span>7</span>상품7</a>
+                </div>
+            </div>  -->
+    <div class="keyword_btn"></div>
+</div><!---// keyword_Wrap 끝-->
+</ul>
+
+</div><!--//extra-menu-->
+</div>
+</div>
+</div>
+</div>
+</div><!--헤더 끝-->
+
+
+
+
+
+
+
+<!----------------------------------------------------컨텐츠-->
+
+
+
+<div id="wrap" class="loginWrap">
+
+
+    <section class="login-area">
+        <div class="login_txt" style="margin-bottom: 20px">
+            <h2 class="tit_login"
+                style="font-size: 38px; font-weight: 900; line-height: 43px; letter-spacing: -1px;">
+                안녕하세요.<br> <span class=""> <img src="img/logo.jpg"style="width: 182px;">
+                </span>입니다.
+            </h2>
+        </div>
+        <nav class="menu-tab column2 jq-tab">
+            <a href="#" class="tab1 active">회원 로그인</a> <a href="#" class="tab2">비회원
+                로그인</a>
+        </nav>
+        <div class="wrap-tab-content">
+            <div id="member-tab01" class="tab-content active">
+                <h2 class="hidden">회원 로그인</h2>
+                <fieldset class="wrap-login-form-area">
+                    <legend class="hidden">계정정보입력/SNS연결/비회원주문</legend>
+                    <div class="login-form-area">
+                        <div class="login-form area-error">
+                            <form action="">
+                                <input id="id" name="uid" required autofocus
+                                    placeholder="아이디 입력" onkeyup="checkCapsLock(event)" /> <input
+                                    id="pw" type="password" name="upw" required
+                                    placeholder="비밀번호 입력" onkeyup="checkCapsLock(event)" />
+                        </div>
+                        <span class="custom-checkbox"> <input type="checkbox"
+                            id="useCookie" checked="checked"> 
+                            <label for="useCookie"  style="">아이디 저장 </label>
+                        </span>
+                        <div id='message'></div>
+                        <span class="btn-area">
+                            <button type="submit" id="loginBtn" class="set-btn-type2">로그인</button>
+                        </span>
+                        
+                        <span class="bookmark" ><i class="fa-solid fa-bookmark"></i> &nbsp;&nbsp;히어로 홈페이지 
+                        <a href="#" id="favorite" title="북마크"> 북마크추가</a> 
+                        하기 </span>
+                        
+                        
+                        </form>
+                        <nav class="menu-utill-login">
+                            <a href="#">아이디 찾기</a> <a href="#">비밀번호 변경</a> <a
+                                href="" target="_blank">회원가입</a>
+                        </nav>
+                    </div>
+
+                    <div class="order-nonmember-area" id="orderPickupMemberArea"
+                        style="display: none; padding: 15px 0 0;">
+                        <p class="notice-nonmember"
+                            style="font-weight: bold; font-size: 1.5rem;">매장 픽업은 회원로그인후
+                            가능합니다.</p>
+                    </div>
+
+                    <div class="sns-connect">
+                        <strong class="sns-login-tit"> <span>SNS 계정으로 로그인</span>
+                        </strong>
+
+                        <div class="btn-area"
+                            style="text-align: center; margin-top: 1.5rem;">
+                            <button id="kakao-login-btn" class="btnKakao">카카오
+                                로그인/회원가입</button>
+                            <button id="naver-login-btn" class="btnNaver">네이버로 계속하기</button>
+                            <button id="apple-login-btn" class="btnApple">Apple로
+                                계속하기</button>
+                        </div>
+                    </div>
+                    <ul class="notice-list-nonmember">
+                        <li>아이디/비밀번호 잊으신 경우에는 <u>아이디/비밀번호 찾기</u>를 누르세요.
+                        </li>
+                        <li>회원이 아니시면 <u>회원가입</u> 후 이용 가능합니다.
+                        </li>
+                        
+                    </ul>
+                </fieldset>
+
+
+
+            </div>
+            <div id="member-tab02" class="tab-content">
+                <h2 class="hidden">비회원 로그인</h2>
+                <fieldset class="wrap-login-form-area">
+                    <legend class="hidden">비회원</legend>
+                    <div class="login-form-area">
+                        <div class="login-form">
+                            <form action="../mem/loginAdminProc.jsp">
+                                <input id="ordernum" type="text" placeholder="주문자명"
+                                    name="adcode" onkeyup="checkCapsLock(event)"> 
+                                    
+                                <input id="ordernum" type="password"
+                                    placeholder="주문자 비밀번호" name="adpw" onkeyup="checkCapsLock(event)">
+                                <p class="txt-error">비회원의 경우, 주문자 성함과 주문 시의 비밀번호로 조회가 가능합니다.</p>
+                        </div>
+                        <div id='message'></div>
+                        <span class="btn-area">
+                            <button class="set-btn-type2" style="background-color: #000">비회원으로
+                                접속</button>
+                        </span>
+                        </form>
+                    </div>
+            
+                </fieldset>
+            </div>
+        </div>
+    </section>
+
+
+<!-------------------------------//컨텐츠 끝------->
+
+    <!--푸터 시작-->
+<footer>
+    <div id="footer_wrap">
+        <div id="footer">
+            <div id="footer_label">
+                <div class="label_inner">
+                    <ul>
+                        <li>회사소개</li>
+                        <li>Inverstor Relations</li>
+                        <li>인재채용</li>
+                        <li>입점/제휴문의</li>
+                        <li>공지사항</li>
+                        <li>고객의소리</li>
+                        <li>히어로페이 이용약관</li>
+                        <li style="color: #346aff">개인정보처리방침</li>
+                        <li>신뢰관리센터</li>
+                        <li>제휴마케팅</li>
+                        <li>광고안내</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="company_wrap">
+                <div class="company_info">
+                    <span>히어로팩토리의 모든 콘텐츠는 저작권이 보호를 받고 있습니다.</span>
+                    <div class="info_inner">
+                        <img src="img/bottom-logo.png" style="display: block; padding-bottom: 10px;">
+                        <div class="contact-one">
+                            상호명 및 호스팅 서비스 제공 : (주)히어로팩토리 <br> 대표이사 : <br> 
+                            서울시 강남구 역삼동
+                        </div>
+                        <div class="contact-onee">
+                            사업자 등록번호 : 123-45-6789
+                            <button type="button" onclick="window.open('','width=800, height=700, toolbar=no, menubar=no, scrollbars=no, resizable=yes');">사업자번호확인</button>
+                            <br> 통신판매업신고 : 2024 - 서울시 역삼 0011
+                        </div>
+                        <div class="contact-two">
+                            <a href="" class="call-center" title="고객센터"> 365고객센터 |
+                                전자금융거래분쟁처리담당<br> 1577-7011 (유료)<br> 서울시 송파구 송파대로 570<br>
+                                <span class="contact-fax">email : help@hero.com</span>
+                            </a>
+                        </div>
+                    </div>
+                   
+                    <div class=" copyright">
+                        <ul class="sns-link">
+                            <li><a href="" target="_blank" class="facebook" title="페이스북"><img src="img/instar.png"></a></li>
+                            <li><a href="" target="_blank" class="blog" title="뉴스룸"><img src="img/instar.png"></a></li>
+                            <li><a href="" target="_blank" class="instagram" title=" 인스타그램"><img src="img/instar.png"></a></li>
+                        </ul>
+                        <span> 사이버몰 내 판매되는 상품 중에는 히어로팩토리에 등록한 개별 판매자가 판매하는
+                            마켓플레이스(오픈마켓) 상품이 포함되어 있습니다. <br>마켓플레이스(오픈마켓) 상품의 경우 히어로는 통신판매중개자이며
+                            통신판매의 당사자가 아닙니다. <br> 히어로팩토리는 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여
+                            책임을 지지 않습니다. 소비자 보호와 안전거래를 위해 신뢰관리센터를
+                            운영하고 있으며, <br>관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다.<br>
+                        </span> <span class="copyright2">Copyright © HERO Corp.
+                            2024 All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+        </div>
+        <!--footer wrap-->
+    </div>
+
+</footer>
+</body></html>
