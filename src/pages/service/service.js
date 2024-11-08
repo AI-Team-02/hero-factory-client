@@ -179,7 +179,7 @@ document.querySelector('.created_btn').addEventListener('click', async () => {
         loadingAnimation.style.display = 'block';
         generatedImage.style.display = 'none'; 
     
-        const response = await fetch('http://herofactory-service:8000/generate/image', {
+        const response = await fetch('https://herofactory-service:8000/generate/image', {
             method: 'POST', 
             body: formatData
         });
