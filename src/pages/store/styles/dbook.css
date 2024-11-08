@@ -106,10 +106,10 @@ body, th, td, input, select, textarea, button {
 
 
 #header .top-account > ul > li.basket > a {
- background:url("../img/top_cart_btn.png") no-repeat; }
+ background:url("/assets/img/top_cart_btn.png") no-repeat; }
 
 #header .top-account > ul > li.mypage > a {
- margin-right:0; background:url("../img/top_my_btn.png") no-repeat; }
+ margin-right:0; background:url("/assets/img/top_my_btn.png") no-repeat; }
 
 
 /* 검색 */
@@ -124,7 +124,7 @@ body, th, td, input, select, textarea, button {
 
 #header .top_search .top_text_cont::before {
  content:""; position:absolute; top:0; right:0; width:49px; height:100%;
-  background:url("../img/btn_top_search.png") no-repeat 0 50%; }
+  background:url("/assets/img/btn_top_search.png") no-repeat 0 50%; }
 
 #header .top_search .top_text_cont input.top_srarch_text {
  display:inline-block; vertical-align:top; width:calc(100% - 49px); height:100%; padding:0 0 0 23px; margin:0; color:#000; font-size:15px; border:0; background:none; box-sizing:border-box; }
