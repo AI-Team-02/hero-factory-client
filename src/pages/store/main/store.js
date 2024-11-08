@@ -1,3 +1,5 @@
+import './store.css';
+
 /* 메인 애니메이션 */
 function animateM($item){
 	var scrollTop = $(window).scrollTop() + $(window).height();

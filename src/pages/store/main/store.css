@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+@import '../styles/pretendard.css';
+@import '../styles/reset1.css';
+@import '../styles/swiper.min.css';
+@import '../styles/dbook.css';
+@import '../styles/reset2.css';
+@import '../styles/liven-theme.css';
+
 body {
 	overflow-x: hidden;
 }
@@ -248,7 +255,7 @@ font-size:0; width:100%; margin:-30px 0 0 0;}
 	left:-1px; 
 	width:48px; 
 	height:48px; 
-	background:#3e3d3c url('../img/btn_allmenu_close.png') no-repeat 0 0; 
+	background:#3e3d3c url('/assets/img/btn_allmenu_close.png') no-repeat 0 0; 
 	cursor:pointer; 
 	text-indent:-9999px; 
 	font-size:0;}
@@ -574,10 +581,10 @@ display:block}
   cursor:pointer; z-index:61; }
 
 .main-visual .slider-wrap .slick-prev {
- left:30px; background-image:url("../img/main_prev.png"); }
+ left:30px; background-image:url("/assets/img/main_prev.png"); }
 
 .main-visual .slider-wrap .slick-next {
- right:30px; background-image:url("../img/main_next.png"); }
+ right:30px; background-image:url("/assets/img/main_next.png"); }
 
 
 /* 비주얼 타이틀 */
