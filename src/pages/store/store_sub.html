@@ -1,0 +1,621 @@
+
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="pretendard.css" rel="stylesheet" type="text/css"/> <!--폰트-->
+<link href="store_reset.css" rel="stylesheet" type="text/css"/> <!---리셋-->
+<title>히어로 스토어</title>
+<link href="store.css" rel="stylesheet" type="text/css"/>
+<link href="store_swiper.min.css" rel="stylesheet" type="text/css"/>
+<!-- // CSS -->
+<link href="store__reset.css" rel="stylesheet" type="text/css"/> <!--리셋-->
+<link href="store_liven-theme.css" rel="stylesheet" type="text/css"/> <!---키프레임-->
+<link href="store_dbook.css" rel="stylesheet" type="text/css"/> <!-- 공통-->
+
+<!--sub-->
+<script src="store_sub.js" defer></script>
+<link href="store_sub.css" rel="stylesheet" type="text/css">
+
+<!-- // JS -->
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="store_swiper.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script> <!----실시간랭크-->
+
+
+
+<!-- JS.swiper -->
+<script src="store_dbook.js"></script>
+<script charset="utf-8" src="store_slick.js" type="text/javascript"></script>
+<script src="store.js" type="text/javascript"></script>
+</head>
+<body class="body-main body-index pc">
+
+
+
+
+<div id="wrap">
+<div id="header_warp">
+<div class="fixed" id="header" style="min-height: 219px;">
+<div class="top-line" id="topLine" style="height: 47px;">
+<div class="top-bn">
+<img alt="banner" src="img/banner2.png" title="banner"/>
+</div>
+</div>
+<div class="header-wrap">
+<div class="header-inner">
+<div class="header-top">
+<div class="header-left">
+<!-- 로고 -->
+ 
+
+<h1 class="top-logo">
+<a href="store.html"><img alt="상단 로고" src="img/logo.jpg" title="상단 로고"/></a></h1>
+<div class="top-search"> <!-- 검색 폼 --> <div class="top_search">
+<form action="" id="frmSearchTop" method="get" name="frmSearchTop" novalidate="novalidate">
+<fieldset>
+<legend>검색폼</legend>
+<div class="top_search_cont">
+<div class="top_text_cont">
+<input autocomplete="off" class="top_srarch_text" id="search_form" name="keyword" placeholder="" title="" type="text"/>
+<input alt="검색" class="btn_top_srarch" id="btnSearchTop" src="img/btn_top_search.png" title="검색" type="image" value="검색"/>
+</div>
+<!-- //top_text_cont -->
+<div class="search_cont" style="display:none;">
+<input name="recentCount" type="hidden" value="10"/>
+</div>
+<!-- //search_cont -->
+</div>
+<!-- //top_search_cont -->
+</fieldset>
+</form>
+</div>
+<!-- //top_search -->
+<!-- 검색 폼 -->
+</div>
+</div>
+<div class="header-right">
+<div class="top-account">
+<ul class="column1">
+<li class="log"><a href="store_login.html">로그인</a></li>
+<li class="join"><a href="">회원가입</a></li>
+<li><a href="">고객센터</a></li>
+</ul>
+<ul class="column2">
+<li class="basket"><a href="store_cart.html">장바구니<span class="count"><em>0</em></span></a></li>
+<li class="mypage"><a href="">마이페이지</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="header-main">
+<div class="header-inner">
+<!-- category -->
+<div id="category">
+<!-- 전체 카테고리 팝업 시작 -->
+<div class="gnb_all">
+<a class="btn_all_menu_open" href="javascript:;"><span></span>전체카테고리</a>
+</div>
+<!--wrap menu-->
+
+<div class="gnb_allmenu_wrap">
+    <div class="gnb_allmenu" style="display: none;">
+        <div class="gnb_allmenu_box">
+            <ul>
+                <li style="width:20%;">
+                    <div class="all_menu_cont">
+                        <a href="">카테고리1</a>
+                        <ul class="all_depth1">
+                            <li>
+                                <a href="">서브카테고리</a>
+                            </li>
+                            <li>
+                                <a href="">서브카테고리</a>
+                            </li>
+                            <li>
+                                <a href="">서브카테고리</a>
+                            </li>
+                            <li>
+                                <a href="">서브카테고리</a>
+                            </li>
+                                <li><a href="">서브카테고리</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li style="width:20%;">
+                        <div class="all_menu_cont">
+                            <a href="">카테고리2</a>
+                        </div>
+                    </li>
+                    <li style="width:20%;">
+                        <div class="all_menu_cont">
+                            <a href="">카테고리3</a>
+                        </div>
+                    </li>
+                    <li style="width:20%;">
+                        <div class="all_menu_cont">
+                            <a href="">카테고리4</a>
+                        </div>
+                    </li>
+                    <li style="width:20%;">
+                        
+                        <div class="all_menu_cont">
+                            <a href="">카테고리5</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <span class="btn_all_menu_close" onclick="gd_btn_all_menu_close();">전체메뉴닫기</span></div>
+            <script> 
+            /* 전체카테고리 열고 닫기 */
+            $(document).ready(function() {
+            // btn_all_menu_open 버튼 클릭 시 열기/닫기
+            $(".btn_all_menu_open").on("click", function() {
+                $(".gnb_allmenu").slideToggle(300); // 슬라이드 속도 조절 가능
+            });
+
+            // btn_all_menu_close 버튼 클릭 시 닫기
+            $(".btn_all_menu_close").on("click", function() {
+                $(".gnb_allmenu").slideUp(300); // 슬라이드 속도 조절 가능
+            });
+            });
+         </script>
+</div>
+<!--//wrap menu-->
+<div class="sub_menu_box layer_type cate-menu">
+<ul class="sub_depth0 sub_menu0 menu-list">
+<li class="tit1 menu-item">
+<a class="" href="">카테고리1</a>
+<ul class="sub_depth1" style="display: none;">
+<li>
+<a class="" href="">섭카테</a>
+</li>
+<li>
+<a class="" href="">섭카테</a>
+</li>
+<li>
+<a href="">섭카테</a>
+</li>
+</ul>
+</li>
+<li class="tit2 menu-item">
+<a class="" href="">카테고리2</a>
+</li>
+<li class="tit3 menu-item">
+<a class="" href="">카테고리3</a>
+</li>
+<li class="tit4 menu-item">
+<a class="" href="">카테고리4</a>
+</li>
+<li class="tit5 menu-item">
+<a class="" href="">카테고리5</a>
+</li>
+</ul>
+</div> <!--//sub_menu_box layer_type cate-menu-->
+</div> <!--//header-main-->
+<div class="extra-menu">
+<ul class="menu-list">
+<li><a href=""><span>공지사항</span></a></li>
+<li><a href=""><span>고객문의</span></a></li>
+<div id="keyword_wrap">
+    <div id="hot_keyword">
+    <div class="title_keyword">인기 검색어</div>
+                <dl id="rank-list">             
+                    <dd>
+                        <ol>
+                            <li><a href=""><span>1</span> 상품1 <p>ㅡ</p></a></li>
+                            <li><a href=""><span>2</span> 상품2<p>ㅡ</p></a></li>
+                            <li><a href=""><span>3</span> 상품3<p style="color:#F90006">▲</p></a></li>
+                            <li><a href=""><span>4</span> 상품4<p style="color:#F90006">▲</p></a></li>
+                            <li><a href=""><span>5</span> 상품5<p>ㅡ</p></a></li>
+                            <li><a href=""><span>6</span> 상품6<p style="color:#F90006">▲</p></a></li>
+                            <li><a href=""><span>7</span> 상품7<p style="color:#0145F8">▼</p></a></li>
+                        </ol>
+                    </dd>
+                </dl>
+            <!-- <div class="keyword_sub">
+                    <a href=""><span>1</span>상품1</a>
+                    <a href=""><span>2</span>상품2</a>
+                    <a href=""><span>3</span>상품3</a>
+                    <a href=""><span>4</span>상품4</a>
+                    <a href=""><span>5</span>상품5</a>
+                    <a href=""><span>6</span>상품6</a>
+                    <a href=""><span>7</span>상품7</a>
+                </div>
+            </div>  -->
+    <div class="keyword_btn"></div>
+</div><!---// keyword_Wrap 끝-->
+</ul>
+
+</div><!--//extra-menu-->
+</div>
+</div>
+</div>
+</div>
+</div><!--헤더 끝-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---- 상품 디테일 시작 -->
+
+<div class="main-wrap">
+    <!-- Image Section -->
+    <div class="image-section">
+        <div class="product-image">
+            <img src="img/product1.jpg" alt="HEEDA Product Image">
+        </div>
+        <div class="thumbnail-images">
+            <img src="img/product1.jpg" class="thumbnail selected">
+            <img src="img/product2.jpg" class="thumbnail" alt="Thumbnail 2">
+            <img src="img/product3.jpg" class="thumbnail" alt="Thumbnail 3">
+            <img src="img/product4.jpg" class="thumbnail" alt="Thumbnail 4">
+        </div>
+    </div>
+
+
+    <div class="details-section">
+        <div class="product-title">대충 상품명인데 여기에다 입력</div>
+        <div class="product-subtitle">상품명 말고 부가 설명인데 대충 길게 쓰면 이렇게 나옴</div>
+
+     
+    <div class="label-section">
+        <span class="best-label">BEST</span>
+        <span class="new-label">NEW</span>
+    </div>
+    
+    <div class="price-section">
+        <div class="price-info">
+            <span class="price">63,000원</span>
+            <span class="discount-price">88,900원</span>
+        </div>
+        <span class="discount-rate">29%</span>
+    </div>
+    <div class="price-line"></div>
+
+ 
+    <div class="info-row">
+        <div class="info-label">라이센스</div>
+        <div class="info-value">site</div>
+    </div>
+    <div class="info-row">
+        <div class="info-label">파일크기</div>
+        <div class="info-value">16.9MB</div>
+    </div>
+    <div class="info-row">
+        <div class="info-label">최신버전</div>
+        <div class="info-value">최신버전</div>
+    </div>
+    <div class="info-row">
+        <div class="info-label">최신릴리즈날짜</div>
+        <div class="info-value">오늘</div>
+    </div>
+
+    <div class="price-line2"></div>
+
+    <div class="details-section2">
+
+        <div class="info-row2">
+            <label for="color-select-box">옵션</label>
+            <select class="select-box" id="color-select-box">
+                <option>- [필수] 옵션을 선택해 주세요 -</option>
+                <option value="블랙">블랙</option>
+                <option value="화이트">화이트</option>
+            </select>
+        </div>
+    
+        <!-- 선택한 옵션이 표시될 영역 -->
+        <div class="selected-options-container" id="selected-options-container"></div>
+    </div>
+    
+
+     
+
+      <span class="min-order-note">(최소 주문수량 1개 이상)</span>
+      <div class="instruction">위 옵션선택 박스를 선택하시면 아래에 상품이 추가됩니다.</div>
+      <!-- 선택한 옵션 표시 영역 -->
+      <div class="selected-options-container" id="selected-options-container">  
+      </div>
+      <div class="total-price-section">
+        <span class="total-price-label">총 상품금액(수량) :</span>
+        <div class="price-quantity">
+            <div class="total-price-value" id="total-price">63,000원</div>
+            <div class="quantity" id="total-quantity">(1개)</div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/48044b8978.js" defer crossorigin="anonymous"></script> <!--폰트어썸-->
+    <div class="buttons">
+        <div class="heart-button"><i class="fa-regular fa-heart"></i></div>
+        <button class="cart-button" onclick="location.href='../store/store_cart.html'">장바구니</button>
+       <!-- 기존 구매하기 버튼에 id 추가 -->
+        <button class="buy-button" id="buyButton">구매하기</button>
+    </div>
+    </div>
+</div>
+
+<!---/// 상품 디테일 끝 -->
+<div id="prdDetail">
+<div id="content">
+    <ul class="menu">
+        <li class="selected"><a href="#prdDetail">상품상세정보</a></li>
+        <li><a href="#prdInfo">상품구매안내</a></li>
+        <li class=""><a href="#prdReview">상품사용후기 <span>(0)</span></a></li>
+        <li class=""><a href="#prdQnA">상품Q&amp;A <span>(2)</span></a></li>
+        <li><a href="#prdRelated">관련상품</a></li>
+    </ul>
+</div>
+<div class="cont">
+    <img src="img/detail.jpg">
+</div>
+<div id="content">
+    <ul class="menu">
+        <li><a href="#prdDetail">상품상세정보</a></li>
+        <li  class="selected"><a href="#prdInfo">상품구매안내</a></li>
+        <li class=""><a href="#prdReview">상품사용후기 <span>(0)</span></a></li>
+        <li class=""><a href="#prdQnA">상품Q&amp;A <span>(2)</span></a></li>
+        <li><a href="#prdRelated">관련상품</a></li>
+    </ul>
+</div>
+
+<!--- 상품 구매안내 -->
+<div class="cont">
+    <h3>상품결제정보</h3>
+    고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다. 확인과정에서 도난 카드의 사용이나 타인 명의의 주문등
+정상적인 주문이 아니라고 판단될 경우 임의로 주문을 보류 또는 취소할 수 있습니다. &nbsp; <br>
+<br>
+무통장 입금은 상품 구매 대금은 PC뱅킹, 인터넷뱅킹, 텔레뱅킹 혹은 가까운 은행에서 직접 입금하시면 됩니다. &nbsp;<br>
+주문시 입력한&nbsp;입금자명과 실제입금자의 성명이 반드시 일치하여야 하며, 7일 이내로 입금을 하셔야 하며&nbsp;입금되지
+않은 주문은 자동취소 됩니다. <br>
+</div>
+<!--- //상품 구매안내 -->
+
+<div id="content">
+    <ul class="menu">
+        <li><a href="#prdDetail">상품상세정보</a></li>
+        <li ><a href="#prdInfo">상품구매안내</a></li>
+        <li  class="selected"><a href="#prdReview">상품사용후기 <span>(0)</span></a></li>
+        <li class=""><a href="#prdQnA">상품Q&amp;A <span>(2)</span></a></li>
+        <li><a href="#prdRelated">관련상품</a></li>
+    </ul>
+</div>
+
+<!-- 상품 사용후기 -->
+<div class="board">
+    <p class="nodata">게시물이 없습니다</p>
+    <p class="ec-base-button typeBorder">
+        <span class="gRight">
+            <a href="" class="btnNormal write-btn">상품후기쓰기</a>
+            <a href="" class="btnNormal">모두 보기</a>
+        </span>
+    </p>
+ </div>
+
+
+
+
+ <!----상품큐앤에이-->
+ <div id="content">
+    <ul class="menu">
+        <li><a href="#prdDetail">상품상세정보</a></li>
+        <li><a href="#prdInfo">상품구매안내</a></li>
+        <li><a href="#prdReview">상품사용후기 <span>(0)</span></a></li>
+        <li class="selected"><a href="#prdQnA">상품Q&amp;A <span>(2)</span></a></li>
+        <li><a href="#prdRelated">관련상품</a></li>
+    </ul>
+</div>
+<div class="board">
+    <p class="nodata">게시물이 없습니다</p>
+    <p class="ec-base-button typeBorder">
+        <span class="gRight">
+            <a href="" class="btnNormal write-btn">상품문의하기</a>
+            <a href="" class="btnNormal">모두 보기</a>
+        </span>
+    </p>
+ </div>
+
+
+
+ 
+
+ <!----관련상품-->
+ <div id="content">
+    <ul class="menu">
+        <li><a href="#prdDetail">상품상세정보</a></li>
+        <li><a href="#prdInfo">상품구매안내</a></li>
+        <li><a href="#prdReview">상품사용후기 <span>(0)</span></a></li>
+        <li><a href="#prdQnA">상품Q&amp;A <span>(2)</span></a></li>
+        <li class="selected"><a href="#prdRelated">관련상품</a></li>
+    </ul>
+</div>
+
+<div id="content2">
+    <ul class="prdList">
+        <li class="item xans-record-">
+            <div class="box">
+            <a href=""><img src="img/item2.jpg" alt="" class="thumb"></a>
+            <p><a href="">상품명 상품명 상품명</a></p>
+            <ul>
+                <li><strong class="">63,000원</strong></li>
+                <li class="salePrice displaynone"></li>
+            </ul>
+            </div>
+        </li>
+        <li class="item xans-record-">
+            <div class="box">
+            <a href=""><img src="img/item2.jpg" alt="" class="thumb"></a>
+            <p><a href="">상품명 상품명 상품명</a></p>
+            <ul>
+                <li><strong class="">63,000원</strong></li>
+                <li class="salePrice displaynone"></li>
+            </ul>
+            </div>
+        </li>
+        <li class="item xans-record-">
+            <div class="box">
+            <a href=""><img src="img/item2.jpg" alt="" class="thumb"></a>
+            <p><a href="">상품명 상품명 상품명</a></p>
+            <ul>
+                <li><strong class="">63,000원</strong></li>
+                <li class="salePrice displaynone"></li>
+            </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--푸터 시작-->
+<footer>
+    <div id="footer_wrap">
+        <div id="footer">
+            <div id="footer_label">
+                <div class="label_inner">
+                    <ul>
+                        <li>회사소개</li>
+                        <li>Inverstor Relations</li>
+                        <li>인재채용</li>
+                        <li>입점/제휴문의</li>
+                        <li>공지사항</li>
+                        <li>고객의소리</li>
+                        <li>히어로페이 이용약관</li>
+                        <li style="color: #346aff">개인정보처리방침</li>
+                        <li>신뢰관리센터</li>
+                        <li>제휴마케팅</li>
+                        <li>광고안내</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="company_wrap">
+                <div class="company_info">
+                    <span>히어로팩토리의 모든 콘텐츠는 저작권이 보호를 받고 있습니다.</span>
+                    <div class="info_inner">
+                        <img src="img/bottom-logo.png" style="display: block; padding-bottom: 10px;">
+                        <div class="contact-one">
+                            상호명 및 호스팅 서비스 제공 : (주)히어로팩토리 <br> 대표이사 : <br> 
+                            서울시 강남구 역삼동
+                        </div>
+                        <div class="contact-onee">
+                            사업자 등록번호 : 123-45-6789
+                            <button type="button" onclick="window.open('','width=800, height=700, toolbar=no, menubar=no, scrollbars=no, resizable=yes');">사업자번호확인</button>
+                            <br> 통신판매업신고 : 2024 - 서울시 역삼 0011
+                        </div>
+                        <div class="contact-two">
+                            <a href="" class="call-center" title="고객센터"> 365고객센터 |
+                                전자금융거래분쟁처리담당<br> 1577-7011 (유료)<br> 서울시 송파구 송파대로 570<br>
+                                <span class="contact-fax">email : help@hero.com</span>
+                            </a>
+                        </div>
+                    </div>
+                   
+                    <div class=" copyright">
+                        <ul class="sns-link">
+                            <li><a href="" target="_blank" class="facebook" title="페이스북"><img src="img/instar.png"></a></li>
+                            <li><a href="" target="_blank" class="blog" title="뉴스룸"><img src="img/instar.png"></a></li>
+                            <li><a href="" target="_blank" class="instagram" title=" 인스타그램"><img src="img/instar.png"></a></li>
+                        </ul>
+                        <span> 사이버몰 내 판매되는 상품 중에는 히어로팩토리에 등록한 개별 판매자가 판매하는
+                            마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.  <br> 마켓플레이스(오픈마켓) 상품의 경우 히어로는 통신판매중개자이며
+                            통신판매의 당사자가 아닙니다. <br> 히어로팩토리는 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여
+                            책임을 지지 않습니다. 소비자 보호와 안전거래를 위해 신뢰관리센터를
+                            운영하고 있으며, <br>관련 분쟁이 발생할 경우 별도의 분쟁 처리절차에 의거 분쟁이 처리됩니다.<br>
+                        </span> <span class="copyright2">Copyright © HERO Corp.
+                            2024 All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+        </div>
+        <!--footer wrap-->
+    </div>
+
+
+</footer>
+<!-- 관심상품 모달 -->
+<!-- 관심상품 모달 -->
+<div id="wishlistModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>관심상품담기</h2>
+        <p>선택하신 상품을 관심상품에 담았습니다.<br>지금 관심상품을 확인하시겠습니까?</p>
+        <div class="modal-buttons">
+            <button id="continueShopping">쇼핑 계속하기</button>
+            <button id="viewWishlist" onclick="location.href='interest.html' ">관심상품 확인</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- 구매 모달 -->
+<!-- 구매 모달 -->
+<div id="purchaseModal" class="modal">
+    <div class="modal-content">
+        <span class="close close-purchase">&times;</span>
+        <div class="product-image">
+            <img src="img/popsample.jpg" alt="상품 이미지">
+        </div>
+        <div class="modal-header">
+            <span class="md-label">MD추천</span>
+            <h3 class="product-name">어쩌구 저쩌구 픽셀 캐릭터 오리지널 36팩</h3>
+            <p class="product-description">팩 하나로 게임 하나를 뚝닥!</p>
+        </div>
+        
+        
+        <div class="price-section">
+            <span class="discount-rate">20%</span>
+            <span class="discounted-price">48,000원</span>
+            <span class="original-price">60,000원</span>
+        </div>
+
+        <div class="shipping-info">
+            <span>라이센스: site</span><br>
+            <span>파일크기:16.9MB</span><br>
+            <span>최신릴리즈날짜:오늘</span>
+        </div>
+
+        <div class="quantity-selector">
+            <button class="quantity-decrease">-</button>
+            <input type="text" value="1" class="quantity-input" readonly>
+            <button class="quantity-increase">+</button>
+            <span>48,000원</span>
+        </div>
+
+        <div class="total-price-section">
+            <span>총 상품금액(수량):</span>
+            <span class="total-price">48,000원 (1개)</span>
+        </div>
+
+        <div class="popup-buttons">
+            <button id="addToCart" class="cart-button" onclick="location.href='../store/store_cart.html'">장바구니</button>
+            <button id="confirmPurchase" class="buy-button">구매하기</button>
+        </div>
+    </div>
+</div>
+
+</body></html>
